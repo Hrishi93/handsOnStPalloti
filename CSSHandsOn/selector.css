@@ -1,0 +1,27 @@
+        
+
+        /*Element Selector Selector*/
+        p{
+            color:hotpink;
+        }
+        h1{
+            text-align: center;
+        }
+        span{
+            border: green 3px solid;
+        }
+
+         /*Class Selector Selector*/
+         .border{
+            border: 2px solid red;
+            border-radius: 12px;
+            width: 200px;
+            text-align: center;
+         }
+
+         /*ID Selector Selector*/
+         #design{
+            font-size: xx-large;
+            background-color: aquamarine;
+            color:blue;
+         }

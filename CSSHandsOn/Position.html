@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Position Demo</title>
+</head>
+<body>
+    <style>
+        #main{
+            width: 100%;
+            height: auto;
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        #box1 , #box2, #box3, #box4, #box5{
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        #box1{
+            background-color: red;
+            position: static;
+            /*left: 30px; /* Not Applicable*/
+        }
+        #box2{
+            background-color: green;
+            position: relative; /* relative is depend on perticular block / element */
+            left: 100px;
+            top:100px;
+        }
+        #box3{
+            background-color: blue;
+            position: absolute;/*relative but body tag => absolute*/
+            top:10px;
+            left: 400px;
+        }
+
+        #box4{
+            background-color: bisque;
+            position: fixed;
+            top:20px;
+            left:100px;
+        }
+
+        #box5{
+            background-color: black;
+            color: white;
+            position: sticky;
+            top:10px;
+            left:150px;
+        }
+
+
+    </style>
+    <div id="main">
+            <div id="box1">Box 1 (static1)</div>
+            <div id="box1">Box 1 (static2)</div>
+            <div id="box1">Box 1 (static3)</div>
+            <div id="box1">Box 1 (static3)</div>
+            <div id="box2">Box 2 (Relative)</div>
+            <div id="box3">Box 3 (absolute)</div>
+            <div id="box4">Box 4 (fixed)</div>
+            <div id="box5">Box 5(Sticky)</div>
+    </div> 
+</body>
+</html>

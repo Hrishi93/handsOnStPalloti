@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <p>Student Registration Form</p>
+    <form>
+        <!--Sring fname="Hrishikesh"-->
+       <p> Enter Your First Name : <input type="text" placeholder="Enter First Name" name="fname"/></p>
+       <p>Enter Your Last Name : <input type="text" placeholder="Enter Last Name" name="lname"/></p> 
+       <p>Enter Your Age : <input type="number" placeholder="Enter Age" name="age"/></p>
+       <p>Enter Password : <input type ="password" placeholder="Enter Password" name="password"/></p>
+       <hr/>
+       <p>Enter Your Gender</p>
+       <!--
+       String gender= female 
+       if we select male gender=male
+       if we select other gender=other
+       -->
+       <span>Female: <input type="radio" name="gender" value="female"/> </span>
+       <span>Male : <input type="radio" name="gender" value="male"/></span>
+       <span>Other: <input type="radio" name="gender" value="other"/></span>
+       <hr/>
+       <p>Select Fevorite Subjects</p>
+       <!--
+       String subjects=[C++, Java, DBMS]
+       -->
+       <P>C++ <input type="checkbox" name="subjects" value="C++"></P>
+       <P>Java <input type="checkbox" name="subjects" value="Java"></P>
+       <P>DSA<input type="checkbox" name="subjects" value="DSA"></P>
+       <P>TOC<input type="checkbox" name="subjects" value="TOC"></P>
+       <P>DBMS<input type="checkbox" name="subjects" value="DBMS"></P>
+       <hr/>
+       <P>Upload Your Image: <input type="file" name="passport"></P>
+       <hr/>
+       <p>Write Down the Feedback : <textarea rows="5" cols="2"></textarea></p>
+
+       <input type="submit" value="Enter"/>
+       <input type="reset" value="Reset"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p[item-type="electronic"]{
+            color: blue;
+        }
+
+        p[item-type="homeapply"]{
+            color: red;
+        }
+
+        p[cost="high"]{
+            border: 2px Solid red;
+            width: 200px;
+        }
+
+        p[cost="low"]{
+            border: 2px dashed blue;
+            width: 200px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        p:hover{
+            background-color: yellow;
+            border-radius: 15px;
+        }
+
+        a:hover{
+            color: red;
+        }
+
+        /*Selection*/
+        a:active{
+            color: blue;
+        }
+
+
+    </style>
+
+    <button><a href="Position.html" target="_blank">Click ME</a></button>
+
+    <P item-type="electronic" cost="high">SmartPhone</P>
+    <p item-type="electronic" cost="low">SmartWatch</p>
+    <p item-type="homeapply" cost="low">InductionCooker</p>
+    <p item-type="electronic" cost="high">Laptop</p>
+    <p item-type="homeapply" cost="low">Mixer</p>
+    <p item-type="homeapply" cost="high">Micro Oven</p>
+    <p item-type="homeapply" cost="high">Washing Machine</p>
+
+    
+</body>
+</html>

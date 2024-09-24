@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div p{
+            color: red;
+        }
+
+        section p{
+            color:blue;
+        }
+
+       ul li{
+            color: blue;
+        }
+
+        #square li{
+            color: red;
+        }
+
+        #square #one{
+            border:3px solid black; 
+            width: 50px;
+        }
+
+        .inside{
+            color: blue;
+        }
+    </style>
+    <div>
+        <p>Hello in P with block one</p>
+        <p>Hello in P with block one</p>
+        <p>Hello in P with block one</p>
+    </div>
+    <section>
+        <p>Hello in P with block Two</p>
+        <p>Hello in P with block Two</p>
+    </section>
+    
+    <ol>
+        <li id="one">Nagpur</li>
+        <li>Nashik</li>
+        <li>Pune</li>
+        <li>Bhandara</li>
+    </ol>
+
+    <ul>
+        <li id="one">Nagpur</li>
+            
+        <li>Nashik</li>
+        <li>Pune</li>
+        <li>Bhandara</li>
+    </ul>
+
+    <ul type="square" id="square">
+        <li id="one">Nagpur</li>
+            <ol>
+                <li class="inside">Jamatha</li>
+            </ol>
+        <li>Nashik</li>
+        <li>Pune</li>
+        <li>Bhandara</li>
+    </ul>
+</body>
+</html>
