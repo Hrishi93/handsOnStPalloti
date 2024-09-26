@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="Types.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        button{
+            background-color: aqua;
+        }
+    </style>
+    <!--Inline JS-->
+    <!--<p onclick="alert('Welcome')">Demo Inline</p>-->
+
+    <!--Internal JS-->
+    <button onclick="msg()">Demo Internal</button>
+
+    <!--External JS-->
+    <button onclick="extMsg()">Demo External</button>
+
+    <script>
+        function msg(){
+            alert('Welcome, In Internal JS')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Output in JS</title>
+</head>
+<body>
+
+    <!--window.alert("Welcome in Alert Box");
+        document.getElementById("collegename").innerHTML = "Welcom at St. Palloti";
+        document.write("msg");
+        console.log("msg");
+    -->
+    <button onclick="alertMsg()">Alert Output</button>
+
+    <button onclick="innerMsg()">Output on innerHTML</button>
+    <p id="inner">Want innerHTML out here</p>
+
+    <button onclick="changeMsg()">Change the Template</button>
+
+    <button onclick="consoleMsg()">Output on Console</button>
+
+    <script> 
+    function consoleMsg(){
+        console.log('Welcome in a Console');
+    }
+
+    function changeMsg(){
+        document.write("Welcome on new Template");
+    }
+
+
+    function msg(){
+        document.getElementById("collegename").innerHTML = "Welcom at St. Palloti";
+    }
+    //Alert Function
+    function alertMsg(){
+        //alert("Welcome in Alert Box");
+        window.alert("Welcome in Alert Box");
+    }  
+
+    //inner Output
+    function innerMsg(){
+       document.getElementById("inner").innerHTML="Welcome, in InnerHTML"
+    }
+    </script>
+</body>
+</html>
