@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modification of Element</title>
+</head>
+<body>
+    <p id="fname">Rameshwar</p>
+    <p id="lname">Kumarswaamy</p>
+    <p class="Address">Kurnool</p>
+    <p class="Address">Main Road</p>
+    <p class="Address">Andra Pradesh</p>
+    
+
+    <button onclick="getName()">Get Name</button>
+    <p id="fullName">Full Name</p>
+    <p id="address">Address</p>
+
+    <script>
+        function getName(){
+            //Access Using ID
+            let fname = document.getElementById("fname");
+            let lname = document.getElementById('lname');
+            let Address=document.getElementsByClassName('Address');
+
+            //Modification Using innerHTML
+            document.getElementById('fullName').innerHTML="Full Name is "+fname.innerHTML+' '+lname.innerHTML;
+            document.getElementById('address').innerHTML="City "+Address[0].innerHTML+" "+Address[1].innerHTML+" "+Address[2].innerHTML;
+        }
+    </script>
+</body>
+</html>

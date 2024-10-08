@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <button onclick="msg()">Click</button>
+    <script>
+        function msg(){
+            let name="Ramanath";
+           document.getElementById('output').innerHTML="Weclome "+name; // using +
+          // document.getElementById('output').innerHTML="Weclome " , name;
+          document.getElementById('output').innerHTML=`Welcome ${name}`;
+          //document.write();
+        }
+    </script>
+</body>
+</html>

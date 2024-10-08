@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Event Listner Demo</p>
+    <button id="demoBtn">Click</button>
+    <button id="timeBtn">Clock</button>
+
+    <p id="output">Msg Will Display Here</p>
+
+    <script>
+        document.getElementById('demoBtn').addEventListener('click' , msg);
+        document.getElementById('timeBtn').addEventListener('click', showTime);
+
+        function msg(){
+            document.getElementById('output').innerHTML = "Button Clicked and Welcome";
+        }
+
+        function showTime(){
+            let time=new Date();
+            alert(time)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h5 id="demo">Welcome at Pune</h5>
+    <p id="remove">Weclome at Nashik</p>
+    <section id="mainSection">
+        <p>Welcoome,</p>
+    </section>
+   
+    <button onclick="funcAppend()">appendChild</button>
+    <button onclick="funRemove()">removeChild</button>
+    <button onabort="replaceDemo()">replace Child</button>
+    <script>
+        function funcAppend(){
+            let newPara=document.createElement('p');
+            let newHeading=document.createElement('h3')
+            newPara.innerHTML="At St Pallotti, Nagpur";
+            newHeading.innerHTML="Maharahstra";
+            mainSection.appendChild(newPara); 
+            mainSection.appendChild(newHeading);
+        } 
+        
+        
+        function funRemove(){
+            const parent = document.body;
+            const removeElement=document.getElementById('remove')
+
+            if(removeElement){
+                parent.removeChild(removeElement);
+            }
+        }
+
+
+       
+
+    </script>
+</body>
+</html>

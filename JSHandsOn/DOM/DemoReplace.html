@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h5 id="demo">Content Will Replace these Tag</h5>
+    <button onclick="functionReplace()">replace</button>
+    <script>
+         function functionReplace() {
+             const parent = document.body;
+             const newElement = document.createElement("h5");
+             newElement.innerHTML = "Welcome at Nagpur";
+
+           const oldElement = document.getElementById("demo");
+                    if (oldElement) {
+                    parent.replaceChild(newElement, oldElement);
+             }
+    }
+    </script>
+</body>
+</html>

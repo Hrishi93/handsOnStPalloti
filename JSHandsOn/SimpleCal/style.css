@@ -1,0 +1,24 @@
+*{
+    text-align: center;
+}
+
+.input-box{
+    width: 400px;
+    height: auto;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.button-box{
+    width: 400px;
+    height: auto;
+    background-color: azure;
+    padding: 20px;
+}
+
+.result-box{
+    width: 400px;
+    height: auto;
+    background-color: pink;
+    padding: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+</head>
+<body>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+    <div id="box" onclick="changeBColor()"  
+        ondblclick="previousColor()"
+        onmouseover="zoomIn()"
+        onmouseout="zooOut()"   
+    >
+
+    </div>
+    <script>
+        function changeBColor(){
+            document.getElementById('box').style.backgroundColor="yellow";
+        }
+
+        function previousColor(){
+            document.getElementById('box').style.backgroundColor="red";
+        }
+
+        function zoomIn(){
+            document.getElementById('box').style.width="400px";
+            document.getElementById('box').style.height='400px';
+        }
+
+        function zooOut(){
+            document.getElementById('box').style.width="200px";
+            document.getElementById('box').style.height='200px';
+        }
+    </script>
+</body>
+</html>

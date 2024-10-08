@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>St.</p>
+    <p>Vincent</p>
+    <p>Palloti</p>
+    <p>Nagpur</p>
+    <p>Maharahstra</p>
+
+    <button onclick="storeTags()">StoreTags</button>
+    <script>
+        function storeTags(){
+            var tags = document.getElementsByTagName('p');
+            console.log(tags[4].innerHTML)
+            console.log("-----------------")
+            let i=0;
+            while(i<tags.length){
+                console.log(tags[i].innerHTML);
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

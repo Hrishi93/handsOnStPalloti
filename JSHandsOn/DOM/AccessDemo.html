@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manupulation</title>
+</head>
+<body>
+    
+    <h3 class="state">Maharahtra</h3> 
+    <h3 class="state">MP</h3>
+    <h3 class="state">UP</h3>
+    <h3 class="state">AP</h3>
+    <h3 class ="region">Vidhrabha</h3>
+    <h3 class ="region">Kokan</h3>
+    <p id="clgName">St. V. Pallotti</p>
+    <p id="city">Nagpur</p>
+    <p class="state">Nashik</p>
+    <button onclick="store()">Get By ID</button>
+    <script>
+        function store(){
+            let states=document.getElementsByClassName("state");
+
+            for(let i=0; i<states.length; i++){
+                console.log(states[i].innerHTML);
+            }
+
+            /*
+            let name = document.getElementById("clgName").innerHTML;
+            let college=document.getElementById('city').innerHTML;
+            console.log(name, college);
+            console.log("----------")
+            let state=document.getElementsByClassName("state");
+            let region=document.getElementsByClassName("region");
+            console.log(state[0].innerHTML, region[0].innerHTML);
+            */
+        }
+    </script>
+</body>
+</html>
