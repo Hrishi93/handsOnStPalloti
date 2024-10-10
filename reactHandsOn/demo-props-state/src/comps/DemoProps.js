@@ -9,3 +9,6 @@ export default function DemoProps(props) {
     </div>
   )
 }
+// return element
+//return only only properties
+// return combine element and Property

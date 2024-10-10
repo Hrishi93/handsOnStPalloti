@@ -2,3 +2,8 @@
   text-align: center;
   background-color: antiquewhite;
 }
+
+button:hover{
+  background-color: blue;
+  padding: 10px;
+}
