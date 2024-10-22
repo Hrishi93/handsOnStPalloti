@@ -1,0 +1,91 @@
+const express = require('express');
+const app = express();
+app.use(express.json()); // Middleware to parse JSON request bodies
+
+// Sample employee data
+let employees = [
+  { id: 1, name: 'John Doe', age: 30, salary: 50000, dept: 'Engineering' },
+  { id: 2, name: 'Jane Smith', age: 25, salary: 60000, dept: 'Marketing' }
+];
+
+// Middleware for logging requests
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);
+  next(); // Call the next middleware or route handler
+});
+
+// Middleware to validate employee data
+const validateEmployeeData = (req, res, next) => {
+  const { name, age, salary, dept } = req.body;
+  if (!name || !age || !salary || !dept) {
+    return res.status(400).send('Missing employee information');
+  }
+  next(); // Call the next middleware or route handler
+};
+
+// GET route to retrieve employee information
+app.get('/employees', (req, res) => {
+  res.json(employees);
+});
+
+// POST route to add or update employee information
+app.post('/employees', validateEmployeeData, (req, res) => {
+  const { id, name, age, salary, dept } = req.body;
+
+  // Check if employee with the given ID already exists
+  const existingEmployee = employees.find(emp => emp.id === id);
+  
+  if (existingEmployee) {
+    // Update the existing employee
+    existingEmployee.name = name;
+    existingEmployee.age = age;
+    existingEmployee.salary = salary;
+    existingEmployee.dept = dept;
+    return res.send('Employee updated successfully');
+  } else {
+    // Add new employee
+    const newEmployee = { id, name, age, salary, dept };
+    employees.push(newEmployee);
+    res.send('Employee added successfully');
+  }
+});
+
+
+// PUT route to update employee data
+app.put('/employees/:id', (req, res) => {
+    const { id } = req.params; // Get employee ID from the URL
+    const { name, age, salary, dept } = req.body; // Get updated data from the request body
+  
+    // Find the employee by ID
+    const employee = employees.find(emp => emp.id == id);
+  
+    if (employee) {
+      // Update the employee data
+      employee.name = name || employee.name;
+      employee.age = age || employee.age;
+      employee.salary = salary || employee.salary;
+      employee.dept = dept || employee.dept;
+  
+      res.send(`Employee with ID ${id} has been updated successfully.`);
+    } else {
+      res.status(404).send(`Employee with ID ${id} not found.`);
+    }
+});
+
+// DELETE route to remove an employee by ID
+app.delete('/employees/:id', (req, res) => {
+  const { id } = req.params;
+  const employeeIndex = employees.findIndex(emp => emp.id == id);
+
+  if (employeeIndex > -1) {
+    employees.splice(employeeIndex, 1);
+    res.send('Employee deleted successfully');
+  } else {
+    res.status(404).send('Employee not found');
+  }
+});
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
