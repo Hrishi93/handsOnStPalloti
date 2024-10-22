@@ -1,0 +1,37 @@
+const express = require('express'); //TPM
+const employeeRouter=require('./employeeRouter'); // UDM - employeeRouter
+const studentRouter=require('./studentRouter'); //UDM - studentRouter
+
+const app=express();
+
+port = 5005;
+
+// middleware
+app.use('/employee' , employeeRouter);
+app.use('/student', studentRouter);
+
+app.get('/', (req,res)=>{
+    res.send('Welcome on Front Page');
+});
+
+app.listen(port, ()=>{
+    console.log(`Server is running http://localhost:${port}/`)
+});
+
+
+-----------------------------------------------------------------------------
+studentRouter.js
+
+
+const express = require('express');
+const studentRouter = express.Router();
+
+studentRouter.get('/', (req, res)=>{
+    res.send('Student POrtal')
+}).get('/getStd' , (req, res)=>{
+    res.send('Students Fethed Successfully')
+}).post('/postStd', (req, res)=>{
+    res.send('Students Posted Successfully')
+}
+)
+module.exports = studentRouter;
